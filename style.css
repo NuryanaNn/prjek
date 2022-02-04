@@ -10,6 +10,8 @@
 	--twitter:#00CED1;
 	--insta:#FF1493;
 	--linkedin:#0000CD;
+	--border:1px solid rgba(255,255,255,.9);
+	--box-shadow:0 5px 10px 0 rgba(0,0,0,.9)
 }
 
 
@@ -43,7 +45,7 @@ header .header-1{
 	display: flex;
 	justify-content: space-between;
 	padding: 1rem 5%;
-	background: var(--black);
+	background: var(--bg);
 	align-items: center;
 	transition: 1s;
 	position: fixed;
@@ -53,7 +55,7 @@ header .header-1{
 }
 
 header .header-1 .logo{
-	color: var(--bg);
+	color: var(--black);
 	text-decoration: none;
 	font-size: 2rem;
 }
@@ -64,7 +66,7 @@ header .header-1 .navbar{
 
 header .header-1 .navbar a{
 	text-decoration: none;
-	color: var(--light-bg);
+	color: var(--black);
 	margin-right: 20px;
 	visibility: visible;
 	position: relative;
@@ -85,7 +87,7 @@ header .header-1 .navbar a:hover::before{
 }
 
 header .header-1 .toggler .toggleDarkLight{
-	background: var(--light-bg);
+	background: var(--black);
 	width: 70px;
 	height: 24px;
 	border-radius: 20px;
@@ -117,7 +119,7 @@ header .header-1 .burger{
 }
 
 header .header-1 .bars1{
-	background: var(--light-bg);
+	background: var(--black);
 	width: 50px;
 	height: 5px;
 	margin: 5px;
@@ -126,7 +128,7 @@ header .header-1 .bars1{
 }
 
 header .header-1 .bars2{
-	background: var(--light-bg);
+	background: var(--black);
 	width: 50px;
 	height: 5px;
 	margin: 5px;
@@ -135,7 +137,7 @@ header .header-1 .bars2{
 }
 
 header .header-1 .bars3{
-	background: var(--light-bg);
+	background: var(--black);
 	width: 50px;
 	height: 5px;
 	margin: 5px;
@@ -144,7 +146,7 @@ header .header-1 .bars3{
 }
 
 header .header-1 .bars4{
-	background: var(--light-bg);
+	background: var(--black);
 	width: 50px;
 	height: 5px;
 	margin: 5px;
@@ -180,7 +182,7 @@ header .header-1 .burger.change .bars4{
 /* Sidebar */
 
 header  .hiddenNavbar{
-	background: var(--black);
+	background: var(--bg);
 	width: 100%;
 	height: 100%;
 	position: fixed;
@@ -200,7 +202,7 @@ header .hiddenNavbar.change{
 }
 
 header .hiddenNavbar a{
-	color: var(--bg);
+	color: var(--black);
 	text-decoration: none;
 	font-size: 2rem;
 	line-height: 40px;
@@ -212,7 +214,7 @@ header .hiddenNavbar a:hover{
 }
 
 .banner{
-	background: var(--black);
+	background: var(--bg);
 }
 
 .banner .sci{
@@ -275,7 +277,7 @@ header .hiddenNavbar a:hover{
 }
 
 .banner .content p{
-	color: var(--bg);
+	color: var(--black);
 	font-size: 2rem;
 	text-transform: capitalize;
 	margin-top: 20px;
@@ -290,7 +292,7 @@ header .hiddenNavbar a:hover{
 }
 
 .banner .content h2{
-	color: var(--bg);
+	color: var(--black);
 	font-size: 2.5rem;
 	margin-bottom:30px;
 }
@@ -298,7 +300,7 @@ header .hiddenNavbar a:hover{
 .banner .content .tagline .btn{
 	background: var(--btn-color);
 	padding: 15px 25px;
-	color: var(--bg);
+	color: var(--black);
 	text-decoration: none;
 	text-transform: capitalize;
 	font-size: 1.2rem;
@@ -320,6 +322,13 @@ header .hiddenNavbar a:hover{
 	width: 100%;
 }
 
+
+/* Skill set */
+.skillset{
+	background: var(--bg);
+	transition: 1s;
+}
+
 .skillset ul{
 	display: flex;
 	list-style: none;
@@ -328,8 +337,9 @@ header .hiddenNavbar a:hover{
 
 .skillset ul li i{
 	font-size: 4rem;
-	color: var(--light-gray);
+	color: var(--black);
 }
+/* Akhir skillset */
 
 
 /* Service */
@@ -347,12 +357,63 @@ header .hiddenNavbar a:hover{
 	font-size: 2.5rem;
 	margin-top: 10px;
 	text-transform: capitalize;
+	color: var(--black);
 }
 
 .service .textHeader p{
 	font-size: 1rem;
 	margin-top: 15px;
+	color: var(--black);
 }
+
+.service{
+	background: var(--bg);
+	transition: 1s;
+}
+
+.service .content{
+	margin-top: 50px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 10fr));
+	grid-gap: 20px;
+}
+
+.service .content .cards{
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.service .content .cards:hover{
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.09);
+}
+
+.service .content .cards .textService{
+	max-width: 300px;
+}
+
+.service .content .cards .textService h1{
+	margin-top: 20px;
+	color: var(--black);
+}
+
+.service .content .cards .textService p{
+	margin-top: 10px;
+	color: var(--black);
+	margin-bottom: 30px;
+}
+
+.service .content .cards .textService .btn{
+	color: var(--black);
+	text-decoration: none;
+	text-transform: capitalize;
+	font-size: 1.4rem;
+}
+
+
 
 
 
@@ -414,7 +475,7 @@ header .hiddenNavbar a:hover{
 	}
 
 	header .toggleDarkLightMobile{
-		background: var(--bg);
+		background: var(--black);
 		width: 80px;
 		height: 30px;
 		border-radius: 20px;
@@ -422,7 +483,7 @@ header .hiddenNavbar a:hover{
 	}
 	header .toggleDarkLightMobile:before{
 		content: '';
-		background: #444;
+		background: var(--bg);
 		height: 27px;
 		width: 27px;
 		border-radius: 50%;
