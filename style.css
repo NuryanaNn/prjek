@@ -1,0 +1,244 @@
+:root{
+	--black:#444;
+	--bg:#fff;
+	--light-bg:#eee;
+}
+
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	transition: .2s linear;
+}
+
+body.active{
+	--black:#eee;
+	--bg:#262626;
+	--light-bg:#000;
+}
+
+header .header-1 .toggler.active .toggleDarkLight::before{
+	right: 10px;
+	transition: 1s;
+}
+
+header .header-1{
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem 5%;
+	background: var(--black);
+	align-items: center;
+	transition: 1s;
+}
+
+header .header-1 .logo{
+	color: var(--bg);
+	text-decoration: none;
+	font-size: 2rem;
+}
+
+header .header-1 .navbar{
+	display: flex;
+}
+
+header .header-1 .navbar a{
+	text-decoration: none;
+	color: var(--light-bg);
+	margin-right: 20px;
+	visibility: visible;
+	position: relative;
+	display: inline-block;
+	transition: .2s;
+}
+
+header .header-1 .navbar a:hover::before{
+	content: '';
+	background: var(--bg);
+	width: 100%;
+	height: 4px;
+	color: var(--bg);
+	position: absolute;
+	bottom: -7px;
+	transition: .2s;
+	border-radius: 5px;
+}
+
+header .header-1 .toggler .toggleDarkLight{
+	background: var(--light-bg);
+	width: 70px;
+	height: 24px;
+	border-radius: 20px;
+	position: relative;
+	display: block;
+	position: relative;
+}
+
+header .header-1 .toggler .toggleDarkLight::before{
+	content: '';
+	background: var(--bg);
+	width: 20px;
+	height: 20px;
+	color: var(--bg);
+	position: absolute;
+	border-radius: 50%;
+	top: 2px;
+	left: 5px;
+	transition: 1s;
+}
+
+header .header-1 .toggler.active .toggleDarkLight::before{
+	left: 45px;
+}
+
+header .header-1 .burger{
+	display: none;
+	cursor: pointer;
+}
+
+header .header-1 .bars1{
+	background: var(--light-bg);
+	width: 50px;
+	height: 5px;
+	margin: 5px;
+	border-radius: 5px;
+	transition: 1s;
+}
+
+header .header-1 .bars2{
+	background: var(--light-bg);
+	width: 50px;
+	height: 5px;
+	margin: 5px;
+	border-radius: 5px;
+	transition: 1s;
+}
+
+header .header-1 .bars3{
+	background: var(--light-bg);
+	width: 50px;
+	height: 5px;
+	margin: 5px;
+	border-radius: 5px;
+	transition: 1s;
+}
+
+header .header-1 .bars4{
+	background: var(--light-bg);
+	width: 50px;
+	height: 5px;
+	margin: 5px;
+	border-radius: 5px;
+	transition: 1s;
+}
+
+/* Change */
+header .header-1 .burger.change .bars1{
+	transform:translateY(20px) ;
+	transition: 1s;
+	opacity: 0;
+}
+
+header .header-1 .burger.change .bars2{
+	transform:rotate(45deg) translate(8px, 8px);
+	transition: 1s;
+}
+
+header .header-1 .burger.change .bars3{
+	transform:rotate(-45deg);
+	transition: 1s;
+}
+
+header .header-1 .burger.change .bars4{
+	transform:translateY(-20px) ;
+	transition: 1s;
+	opacity: 0;
+}
+/* End Change */
+
+
+/* Sidebar */
+
+header  .hiddenNavbar{
+	background: var(--black);
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 100%;
+	transition: 1s ease-in-out;
+	visibility: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+}
+
+header .hiddenNavbar.change{
+	left: 0%;
+	transition: 1s ease-in-out;
+}
+
+header .hiddenNavbar a{
+	color: var(--bg);
+	text-decoration: none;
+	font-size: 2rem;
+	line-height: 40px;
+}
+
+header .hiddenNavbar a:hover{
+	letter-spacing: 2px;
+	transform: translateX(10px);
+}
+
+
+
+
+
+@media(max-width:768px){
+	header .header-1 .navbar a{
+		text-decoration: none;
+		color: var(--light-bg);
+		margin-right: 20px;
+		display: none;
+	}
+	
+	header .header-1 .burger{
+		display: block;
+	}
+	
+	header .header-1 .toggler .toggleDarkLight{
+		display: none;
+	}
+
+	header  .hiddenNavbar{
+		visibility: visible;
+	}
+
+	header .toggleDarkLightMobile{
+		background: var(--bg);
+		width: 80px;
+		height: 30px;
+		border-radius: 20px;
+		position: relative;
+	}
+	header .toggleDarkLightMobile:before{
+		content: '';
+		background: #444;
+		height: 27px;
+		width: 27px;
+		border-radius: 50%;
+		position: absolute;
+		left: 3px;
+		top: 2px;
+		transition: 1s;
+	}
+
+	header .togglerMobile.active .toggleDarkLightMobile::before{
+		left: 45px;
+		transition: 1s;
+	}
+}
