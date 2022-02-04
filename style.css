@@ -2,6 +2,14 @@
 	--black:#444;
 	--bg:#fff;
 	--light-bg:#eee;
+	--green-bg:#008000;
+	--light-gray:#D3D3D3;
+	--btn-color:#DC143C;
+	--red:#FF0000;
+	--facebook:#1E90FF;
+	--twitter:#00CED1;
+	--insta:#FF1493;
+	--linkedin:#0000CD;
 }
 
 
@@ -12,13 +20,18 @@
 }
 
 body{
-	transition: .2s linear;
+	transition: all .2s linear;
 }
 
 body.active{
 	--black:#eee;
 	--bg:#262626;
 	--light-bg:#000;
+	--light-gray:#2F4F4F;
+}
+
+section{
+	padding: 5rem 5%;
 }
 
 header .header-1 .toggler.active .toggleDarkLight::before{
@@ -33,6 +46,10 @@ header .header-1{
 	background: var(--black);
 	align-items: center;
 	transition: 1s;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 200;
 }
 
 header .header-1 .logo{
@@ -194,6 +211,183 @@ header .hiddenNavbar a:hover{
 	transform: translateX(10px);
 }
 
+.banner{
+	background: var(--black);
+}
+
+.banner .sci{
+	position: fixed;
+	left: -100px;
+}
+
+.banner .sci ul{
+	list-style: none;
+}
+
+.banner .sci ul li{
+	margin-top: 5px;
+}
+
+.banner .sci ul li i{
+	font-size: 1.5rem;
+	margin-top: 3px;
+	color: var(--bg);
+}
+
+.banner .sci ul li:hover{
+	transform: translateX(30px);
+}
+
+.banner .sci ul li:nth-child(1){
+	background: var(--facebook);
+	padding: 5px 5px 5px 100px;
+	border-radius: 0 5px 5px 0;
+}
+
+.banner .sci ul li:nth-child(2){
+	background: var(--twitter);
+	padding: 5px 5px 5px 100px;
+	border-radius: 0 5px 5px 0;
+}
+
+.banner .sci ul li:nth-child(3){
+	background: var(--insta);
+	padding: 5px 5px 5px 100px;
+	border-radius: 0 5px 5px 0;
+}
+
+.banner .sci ul li:nth-child(4){
+	background: var(--linkedin);
+	padding: 5px 5px 5px 100px;
+	border-radius: 0 5px 5px 0;
+}
+
+
+.banner .content{
+	display: flex;
+	position: relative;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.banner .content .tagline{
+	max-width: 600px;
+}
+
+.banner .content p{
+	color: var(--bg);
+	font-size: 2rem;
+	text-transform: capitalize;
+	margin-top: 20px;
+}
+
+.banner .content h1{
+	font-size: 4rem;
+	margin-top: 10px;
+	color: var(--red);
+	font-weight: 800;
+	opacity: 80%;
+}
+
+.banner .content h2{
+	color: var(--bg);
+	font-size: 2.5rem;
+	margin-bottom:30px;
+}
+
+.banner .content .tagline .btn{
+	background: var(--btn-color);
+	padding: 15px 25px;
+	color: var(--bg);
+	text-decoration: none;
+	text-transform: capitalize;
+	font-size: 1.2rem;
+}
+
+.banner .content .tagline .btn:hover{
+	letter-spacing: 3px;
+	opacity: 0.9;
+}
+
+.banner .imgBx{
+	height: 500px;
+	width: 400px;
+	position: relative;
+}
+
+.banner .imgBx img{
+	height: 100%;
+	width: 100%;
+}
+
+.skillset ul{
+	display: flex;
+	list-style: none;
+	justify-content: space-around;
+}
+
+.skillset ul li i{
+	font-size: 4rem;
+	color: var(--light-gray);
+}
+
+
+/* Service */
+.service .textHeader{
+	text-align: center;
+}
+
+.service .textHeader h5{
+	font-size: 1.5rem;
+	text-transform: capitalize;
+	color: var(--btn-color);
+}
+
+.service .textHeader h3{
+	font-size: 2.5rem;
+	margin-top: 10px;
+	text-transform: capitalize;
+}
+
+.service .textHeader p{
+	font-size: 1rem;
+	margin-top: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:991px){
+	.banner .sci{
+		display: none;
+	}
+}
 
 
 
@@ -216,6 +410,7 @@ header .hiddenNavbar a:hover{
 
 	header  .hiddenNavbar{
 		visibility: visible;
+		z-index: 100;
 	}
 
 	header .toggleDarkLightMobile{
@@ -240,5 +435,28 @@ header .hiddenNavbar a:hover{
 	header .togglerMobile.active .toggleDarkLightMobile::before{
 		left: 45px;
 		transition: 1s;
+	}
+
+	.banner .content{
+		display: flex;
+		position: relative;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap-reverse;
+	}
+
+	.banner .content{
+		text-align: center;
+	}
+
+	.banner .imgBx{
+		margin-left: 90px;
+	}
+	
+}
+
+@media(max-width:560px){
+	.banner .imgBx{
+		margin-left: 10px;
 	}
 }
