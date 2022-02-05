@@ -23,7 +23,7 @@
 
 body{
 	transition: all .2s linear;
-	height: 9000px;
+	scroll-behavior: smooth;
 }
 
 body.active{
@@ -222,6 +222,7 @@ header .hiddenNavbar a:hover{
 .banner .sci{
 	position: fixed;
 	left: -100px;
+	z-index: 400;
 }
 
 .banner .sci ul{
@@ -524,8 +525,83 @@ header .hiddenNavbar a:hover{
 .works .content .recentWorks .imgBx span a{
 	font-size: 1.8rem;
 	color: #fff;
+	text-decoration: none;
 }
 
+/* Section Interest */
+.interest{
+	text-align: center;
+	background: var(--bg);
+	transition: 1s;
+}
+
+.interest .textHeader h3{
+	color: var(--black);
+	font-size: 4rem;
+	text-transform: capitalize;
+	margin-bottom: 30px;
+}
+
+.interest .textHeader .btn{
+	color: var(--black);
+	background: var(--btn-color);
+	text-transform: capitalize;
+	text-decoration: none;
+	padding: 15px 20px;
+	letter-spacing: 1.5px;
+}
+
+.interest .textHeader .btn:hover{
+	letter-spacing: 2.5px;
+}
+
+
+/* Footer */
+.footer{
+	text-align: center;
+	background: var(--bg);
+	transition: 1s;
+}
+
+.footer h3{
+	color: var(--black);
+	font-size: 1.9rem;
+	text-transform: capitalize;
+	margin-bottom: 15px;
+}
+
+.footer h4{
+	color: var(--black);
+	font-size: 1.5rem;
+}
+
+.footer h5{
+	margin-top: 15px;
+	color: var(--black);
+	font-size: 1.2rem;
+	margin-bottom: 15px;
+}
+
+.footer .sci{
+	display: flex;
+	flex-direction: row;
+	list-style: none;
+	justify-content: center;
+	margin-top: 30px;
+}
+
+.footer .sci li{
+	margin-right: 20px;
+	border: 2px solid var(--black);
+	border-radius: 50%;
+	padding: 20px;
+	color: var(--black);
+}
+
+.footer .sci li:hover{
+	background: var(--btn-color);
+	transform: scale(1.1);
+}
 
 
 
