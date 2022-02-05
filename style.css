@@ -23,6 +23,7 @@
 
 body{
 	transition: all .2s linear;
+	height: 9000px;
 }
 
 body.active{
@@ -215,6 +216,7 @@ header .hiddenNavbar a:hover{
 
 .banner{
 	background: var(--bg);
+	transition: 1s;
 }
 
 .banner .sci{
@@ -233,7 +235,7 @@ header .hiddenNavbar a:hover{
 .banner .sci ul li i{
 	font-size: 1.5rem;
 	margin-top: 3px;
-	color: var(--bg);
+	color: var(--black);
 }
 
 .banner .sci ul li:hover{
@@ -411,6 +413,117 @@ header .hiddenNavbar a:hover{
 	text-decoration: none;
 	text-transform: capitalize;
 	font-size: 1.4rem;
+}
+
+.reveal{
+	position: relative;
+	transform: translateY(150px);
+	opacity: 0;
+	transition: 1s ease;
+}
+
+.reveal.active{
+	transform: translateY(0px);
+	opacity: 1;
+}
+
+.works{
+	background: var(--bg);
+	transition: 1s;
+}
+
+.works .textHeader{
+	text-align: center;
+	font-size: 3rem;
+	font-weight: 500;
+	text-transform: capitalize;
+}
+
+.works .textHeader h3{
+	color: var(--black);
+}
+
+.works .content{
+	width: 100%;
+	position: relative;
+}
+
+.works .content ul{
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	margin-top: 30px;
+	color: var(--black);
+	margin-bottom: 70px;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.works .content ul li{
+	background: var(--black);
+	padding: 10px 20px;
+	margin-right: 20px;
+	color: var(--bg);
+	text-transform: capitalize;
+	margin-top: 10px;
+	cursor: pointer;
+}
+
+.works .content .recentWorks{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	transition: 1s;
+}
+
+.works .content .recentWorks .imgBx{
+	width: 350px;
+	height: 350px;
+	position: relative;
+	margin-top: 10px;
+	transition: 1s;
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.09);
+	padding: 10px;
+	overflow: hidden;
+}
+
+.works .content .recentWorks .imgBx:hover{
+	transform: translateY(-10px);
+}
+
+
+.works .content .recentWorks .imgBx img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: 1s;
+}
+
+.recentWorks .itmBx.hide{
+	display: none;
+}
+
+.recentWorks .imgBx:hover .overlay{
+	background: rgba(8, 134, 218, 0.9);
+	position: absolute;
+	width: 330px;
+	height: 330px;
+	top: 10px;
+	left: 10px;
+	transition: 1s ease-in-out;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.works .content .recentWorks .imgBx span{
+	margin-right: 15px;
+}
+
+.works .content .recentWorks .imgBx span a{
+	font-size: 1.8rem;
+	color: #fff;
 }
 
 
